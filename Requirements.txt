@@ -1,0 +1,20 @@
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0       # Optional, but often installed with torch
+
+# Meteorological Data Handling
+xarray>=2023.1.0        # Primary tool for MERRA-2 NetCDF data
+netCDF4>=1.6.0          # Backend for xarray
+h5netcdf>=1.1.0         # Faster HDF5 backend
+dask>=2023.1.0          # Parallel loading for large datasets
+
+# Data Science & Metrics
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.2.0     # For ROC-AUC, Precision/Recall metrics
+tqdm>=4.65.0            # Progress bars for training loops
+
+# Visualization
+matplotlib>=3.7.0
+cartopy>=0.21.0         # (Optional) For geospatial plotting if mapping storms
