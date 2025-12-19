@@ -44,15 +44,6 @@ The pipeline is structured into three phases:
     * *Standard U-Net* provided reasonable detection but suffered from higher false-positive rates.
 * **Conclusion:** The study confirms that attention mechanisms are critical for suppressing noise in meteorological data, making them superior for rare-event forecasting.
 
-## Dependencies
-
-* `torch` (PyTorch)
-* `numpy`
-* `pandas`
-* `xarray` (For NetCDF weather data)
-* `matplotlib` (Visualization)
-* `scikit-learn` (Metrics)
-
 ## References
 
 * **Gelaro, R., et al. (2017).** The Modern-Era Retrospective analysis for Research and Applications, version 2 (MERRA-2). *Journal of Climate*.
