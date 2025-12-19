@@ -44,13 +44,6 @@ The pipeline is structured into three phases:
     * *Standard U-Net* provided reasonable detection but suffered from higher false-positive rates.
 * **Conclusion:** The study confirms that attention mechanisms are critical for suppressing noise in meteorological data, making them superior for rare-event forecasting.
 
-## References
-
-* **Gelaro, R., et al. (2017).** The Modern-Era Retrospective analysis for Research and Applications, version 2 (MERRA-2). *Journal of Climate*.
-* **Lin, T.-Y., et al. (2017).** Focal loss for dense object detection. *ICCV*.
-* **Oktay, O., et al. (2018).** Attention U-Net: Learning Where to Look for the Pancreas. *arXiv*.
-* **Lam, R., et al. (2023).** Learning skillful medium-range global weather forecasting. *Science*.
-
 ## License
 
 This project is for academic research purposes.
