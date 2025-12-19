@@ -23,7 +23,7 @@ The pipeline is structured into three phases:
 
 1.  **Data Processing:**
     * **Source:** NASA MERRA-2 Reanalysis.
-    * **Preprocessing:** Normalization (Z-score) of 22 atmospheric variables.
+    * **Preprocessing:** Normalization (Z-score) of 16 atmospheric variables.
     * **Labeling:** Generation of binary segmentation masks based on historical storm tracks (Positive label = Genesis within 24h).
 
 2.  **Model Framework:**
@@ -43,6 +43,18 @@ The pipeline is structured into three phases:
     * *ResSegNet* underperformed (AUC 0.43), failing to capture the complex spatial dependencies.
     * *Standard U-Net* provided reasonable detection but suffered from higher false-positive rates.
 * **Conclusion:** The study confirms that attention mechanisms are critical for suppressing noise in meteorological data, making them superior for rare-event forecasting.
+
+## Repo Structure
+
+- Genesis_probability_NN.ipynb: The primary research notebook that implements, trains, and benchmarks the three semantic segmentation architectures (U-Net, ResSegNet, Attention U-Net) using Focal Loss to generate genesis probability maps.
+
+- download_extract_dataset.ipynb: Handles the data engineering pipeline, connecting to NASA's MERRA-2 servers to fetch 22-channel atmospheric variables (NetCDF format), preprocess them with Z-score normalization, and align them with the Storm_trajectory.csv labels.
+
+- Storm_trajectory.csv: Contains the historical "ground truth" data, listing coordinates and timestamps of confirmed tropical cyclone genesis events used to generate the binary segmentation masks.
+
+- Requirements.txt: Specifies the deep learning environment, primarily requiring PyTorch for model training, xarray/netCDF4 for meteorological data parsing, and scikit-learn for computing ROC-AUC metrics.
+
+- Outputs/: A directory likely used to store the generated inference artifacts.
 
 ## License
 
